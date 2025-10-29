@@ -1,66 +1,42 @@
-import Image from "next/image";
-import styles from "./page.module.css";
-
 export default function Home() {
+  const posts = [
+    {
+      title: "Welcome to Reddit Clone!",
+      description:
+        "This is the first post on our Reddit clone. Feel free to explore and see how posts are displayed.",
+    },
+    {
+      title: "How to build a Next.js app",
+      description:
+        "Next.js is a powerful React framework that makes building web applications easier. It provides features like server-side rendering, static site generation, and more.",
+    },
+    {
+      title: "The benefits of using CSS Modules",
+      description:
+        "CSS Modules help you write modular and scoped CSS. Each component gets its own CSS file, preventing style conflicts across your application.",
+    },
+    {
+      title: "React 19 is here!",
+      description:
+        "React 19 brings exciting new features and improvements. The new compiler and enhanced hooks make development even more enjoyable.",
+    },
+    {
+      title: "Why Turbopack is fast",
+      description:
+        "Turbopack is a next-generation bundler built with Rust. It's designed to be incredibly fast and efficient, making your development experience smoother.",
+    },
+  ];
+
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.js file.</h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <div className="container">
+      <h1 className="title">Posts</h1>
+      {posts.map((post, index) => (
+        <div key={index} className="post">
+          {console.log(index)}
+          <h2>{post.title}</h2>
+          <p>{post.description}</p>
         </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+      ))}
     </div>
   );
 }
