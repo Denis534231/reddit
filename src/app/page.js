@@ -29,6 +29,10 @@ export default function Home() {
 
   return (
     <div className="container">
+      <div className="header">
+        <h1 className="headerTitle">Reddit Clone</h1>
+        <button className="headerButton">Create Post</button>
+      </div>
       <h1 className="title">Posts</h1>
       {posts.map((post, index) => (
         <div key={index} className="post">
