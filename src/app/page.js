@@ -1,3 +1,7 @@
+"use client";
+
+import { useRouter } from "next/navigation";
+
 export default function Home() {
   const posts = [
     {
@@ -26,12 +30,15 @@ export default function Home() {
         "Turbopack is a next-generation bundler built with Rust. It's designed to be incredibly fast and efficient, making your development experience smoother.",
     },
   ];
+  const router = useRouter();
 
   return (
     <div className="container">
       <div className="header">
         <h1 className="headerTitle">Reddit Clone</h1>
-        <button className="headerButton">Create Post</button>
+        <button className="headerButton" onClick={() => router.push("/create")}>
+          Create Post
+        </button>
       </div>
       <h1 className="title">Posts</h1>
       {posts.map((post, index) => (

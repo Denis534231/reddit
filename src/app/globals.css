@@ -24,7 +24,7 @@ body {
 
 .headerTitle {
   font-size: 35px;
-  margin: 0;
+  /* margin: 0; */
 }
 .headerButton {
   font-size: 15px;
@@ -32,7 +32,6 @@ body {
   background-color: red;
   color: rgb(255, 255, 255);
   /* border: none; */
-  border: 1px, solid, black;
 }
 
 .header {
@@ -41,4 +40,65 @@ body {
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid #303030;
+}
+
+.createPost {
+  /* display: flex; */
+  width: 400px;
+  border: 1px solid #323232;
+  margin: 0 auto;
+  border-radius: 5px;
+  /* flex-direction: column; */
+}
+
+.createPostTitle {
+  font-size: 30px;
+}
+
+.createPostTitleInput {
+  background-color: #000000;
+  color: #d30d0d;
+  border: 1px solid #323232;
+  border-radius: 2px;
+}
+
+.createPostSmallTitle {
+  margin-bottom: 5px;
+}
+
+.createPostDescription {
+  margin-bottom: 5px;
+}
+
+.createPostDescriptionInput {
+  background-color: #000000;
+  color: #d30d0d;
+  border: 1px solid #323232;
+  border-radius: 2px;
+  margin-bottom: 20px;
+}
+
+.createPostButton {
+  font-size: 12px;
+  border-radius: 10px;
+  background-color: red;
+  color: rgb(255, 255, 255);
+  border: 1px, solid, red;
+}
+
+.createPostCancelButton {
+  font-size: 12px;
+  border-radius: 10px;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  border: 1px, solid, red;
+}
+
+.createPostButtons {
+  display: flex;
+  gap: 20px;
+}
+
+.postCard {
+  margin: 15px;
 }
