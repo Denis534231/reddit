@@ -9,11 +9,13 @@ export default function Create() {
     <div className="createPost">
       <div className="postCard">
         <h1 className="createPostTitle">Create a Post</h1>
+
         <p className="createPostSmallTitle">Title</p>
         <input
           className="createPostTitleInput"
           placeholder="Enter post title"
         ></input>
+
         <p className="createPostDescription">Description</p>
         <input
           className="createPostDescriptionInput"
