@@ -12,15 +12,16 @@ export default function Create() {
 
         <p className="createPostSmallTitle">Title</p>
         <input
+          type="text"
           className="createPostTitleInput"
           placeholder="Enter post title"
         ></input>
 
         <p className="createPostDescription">Description</p>
-        <input
-          className="createPostDescriptionInput"
+        <textarea
+          className="createPostDescriptionTextarea"
           placeholder="Enter post description"
-        ></input>
+        ></textarea>
 
         <div className="createPostButtons">
           <button className="createPostButton" onClick={() => router.push("/")}>
