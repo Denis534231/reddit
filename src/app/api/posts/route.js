@@ -29,3 +29,14 @@ const posts = [
 export function GET() {
   return Response.json(posts);
 }
+
+export function POST() {
+  const newPost = {
+    title: "New post",
+    description: "Description",
+  };
+
+  posts.push(newPost);
+
+  return Response.json(posts);
+}
