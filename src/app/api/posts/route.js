@@ -30,13 +30,14 @@ export function GET() {
   return Response.json(posts);
 }
 
-export function POST() {
+export async function POST(request) {
+  const body = await request.json();
+  console.log(body);
   const newPost = {
     title: "New post",
     description: "Description",
   };
 
-  posts.push(newPost);
-
+  posts.unshift(newPost);
   return Response.json(posts);
 }

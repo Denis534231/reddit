@@ -10,7 +10,7 @@ export default function CreatePostButton() {
     });
   }
   return (
-    <button className="headerButton" onClick={handleClick}>
+    <button className="headerButton" onClick={() => router.push("/create")}>
       Create Post
     </button>
   );

@@ -18,7 +18,20 @@ export default function Create() {
     setPostDescriptionValue(e.target.value);
   };
 
-  console.log({ postTitleValue });
+  async function handleCreateClick() {
+    console.log("Title:", postTitleValue);
+    console.log("Description:", postDescriptionValue);
+
+    await fetch("/api/posts", {
+      method: "POST",
+      body: JSON.stringify({
+        title: postTitleValue,
+        description: postDescriptionValue,
+      }),
+    });
+
+    router.push("/");
+  }
   return (
     <div className="createPost">
       <div className="postCard">
@@ -42,7 +55,7 @@ export default function Create() {
         ></textarea>
 
         <div className="createPostButtons">
-          <button className="createPostButton" onClick={() => router.push("/")}>
+          <button className="createPostButton" onClick={handleCreateClick}>
             Create Post
           </button>
           <button
